@@ -8,19 +8,19 @@ window.addEventListener("load", function() {
 
 
 window.onload=function(){
-	var video=document.querySelector("#player1");
-	var currentspeed=1;
-	var mutestatus=false;
+	var video = document.querySelector("#player1");
+	var currentspeed = 1;
+	var mutestatus = false;
 	var currentvolume=100;
-	var playVid=document.getElementById("play");
-	var pauseVid=document.getElementById("pause");
-	var slowVid=document.getElementById("slower");
-	var speedVid=document.getElementById("faster");
-        var skipAhead=document.getElementById("skip");
+	var playVid = document.getElementById("play");
+	var pauseVid = document.getElementById("pause");
+	var slowVid = document.getElementById("slower");
+	var speedVid = document.getElementById("faster");
+	var skipAhead = document.getElementById("skip");
 	var mutebtn = document.getElementById("mute");
-	var sliding=document.getElementById("slider");
-	var oldschool=document.getElementById("vintage");
-	var original=document.getElementById("orig");
+	var sliding = document.getElementById("slider");
+	var oldschool = document.getElementById("vintage");
+	var original = document.getElementById("orig");
 
 	playVid.addEventListener("click", function(){
 		video.play();
@@ -53,6 +53,7 @@ window.onload=function(){
 			video.currentTime = 0;
 			console.log("Going back to beginning");
 			console.log("New location 0");
+			
 		}
 		else{
 			video.currentTime = newtime;	
@@ -65,13 +66,11 @@ window.onload=function(){
 			mutestatus = false;
 			video.muted = false;
 			mutebtn.innerHTML = "Mute";
-			// console.log("Unmuted");
 		}
 		else{
 			mutestatus = true;
 			video.muted = true;
 			mutebtn.innerHTML = "Unmute";
-			// console.log("Muted");
 
 		}
 
